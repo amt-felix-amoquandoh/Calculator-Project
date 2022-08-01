@@ -1,5 +1,63 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+/* Base styles color: var(--light-color-alt); */
+:root{
+  --theme1-main-background: hsl(222, 26%, 31%);
+  --theme1-toggle-blue:  hsl(223, 31%, 20%);
+  --theme1-screen-blue: hsl(224, 36%, 15%);
+  --theme1-key-background: hsl(225, 21%, 49%);
+  --theme1-key-shadow: hsl(224, 28%, 35%);
+  --theme1-red-key: hsl(6, 63%, 50%);
+  --theme1-red-shadow: hsl(6, 70%, 34%);
+  --theme1-hover-orange: hsl(30, 25%, 89%);
+  --theme1-hover-shadow: hsl(28, 16%, 65%);
+  --theme1-grayBlue-text: hsl(221, 14%, 31%);
+  --color-white: hsl(0, 0, 100%);
+  --color-black: rgb(0, 0, 0);
+  --theme2-main-background: hsl(0, 0%, 90%);
+  --theme2-toggle-background:  hsl(0, 5%, 81%);
+  --theme2-keypad-background:  hsl(0, 5%, 81%);
+  --theme2-screen-background: hsl(0, 0%, 93%);
+  --theme2-key-background: hsl(185, 42%, 37%);
+  --theme2-key-shadow: hsl(185, 58%, 25%);
+  --theme2-orange-key: hsl(25, 98%, 40%);
+  --theme2-orange-shadow: hsl(25, 99%, 27%);
+  --theme2-darkyellow-text: hsl(60, 10%, 19%);
+  --theme3-main-background: hsl(268, 75%, 9%);
+  --theme3-toggle-background:  hsl(268, 71%, 12%);
+  --theme3-screen-background: hsl(268, 71%, 12%);
+  --theme3-keypad-background: hsl(268, 71%, 12%);
+  --theme3-key-background: hsl(281, 89%, 26%);
+  --theme3-key-shadow: hsl(285, 91%, 52%);
+  --theme3-cyan-keybackground: hsl(176, 100%, 44%);
+  --theme3-cyan-keyshadow: hsl(177, 92%, 70%);
+  --theme3-voilet-keybackground: hsl(268, 47%, 21%);
+  --theme3-voilet-keyshadow: hsl(290, 70%, 36%);
+  --theme3-yellow-text: hsl(52, 100%, 62%);
+  --theme3-darkblue-text: hsl(198, 20%, 13%);
+  --font-family: 'League Spartan', sans-serif;
+  --font-size: 32px;
 }
+
+/* general styles */
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/** media queries for responsive interface **/
+ /** tablet view **/
+ @media (min-device-width: 764px) 
+  and (max-device-width: 990px)
+  and (-webkit-min-device-pixel-ratio: 1){}
+
+   /* Mobile devices view */
+
+@media only screen 
+and (min-device-width: 175px) 
+and (max-device-width: 764px)
+and (-webkit-min-device-pixel-ratio: 2){}
