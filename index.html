@@ -7,16 +7,88 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Calculator app</title>
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
+  rel="stylesheet"
+/>
   <link rel="stylesheet" href="./style.css" />
 </head>
+
+
 <body>
+<div class="container calcLayout">
+       <!--header below-->
+  <div class="container header">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 headerLeft">       
+          <h1 class="calcLabel">
+           calc
+          </h1>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 headerRight">
+        <div class="radioArea">
+          <span class="text-white">THEME</span>
+        <div class="radioBackground">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+          </div>
+          
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+          </div>
+          
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" />
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--nav ends here-->
 
 
+  <!--Cover below-->
+  <div class="container app coverTop">
+    <div class="contain">
+			
+      <span id="numberOne" class="numDisplay"></span>
+      <span id="numberTwo" class="numDisplay"></span>
+      <span id="numbersSumDisplay" class="numDisplay">0</span>
+    </div>
+  </div>
+  <!--cover ends-->
+
+<!--body below-->
+  <div class="container-fluid  projectBody">
+    <div class=" blue grid-wrapper">
+      <div class="box "></div>
+      <div class="box "></div>
+      <div class="box "></div>
+      <div class="box "></div>
+      <div class="box "></div>
+      <div class="box "></div>
+      <div class="box "></div>
+      <div class="box "></div>
+    </div>
+  </div>
+</div>
+  <!--body ends here-->
   
+  
+
+
+
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/felixEKow"><i>theDev_Felix</i></a>.
   </div>
+  <!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"
+></script>
   <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
