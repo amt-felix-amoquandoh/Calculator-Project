@@ -56,15 +56,17 @@ body{
 
 .calcLayout{
   width: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 20px;
 }
 
 /* header styling */
-.header{  
+.navbar{
+  box-shadow: none;
+  border: none;
+  padding: 1px 14px;
+
+}
+.calcHeader{  
   cursor: pointer;
   grid-column: 1/-1;
 }
@@ -73,35 +75,48 @@ body{
 }
 
 .radioArea{
+  float: right;
   display: flex;
   flex-direction: row;
-  justify-content: end;
 }
 
-.headerRight{
-  padding: 30px;
-}
-.headerLeft{
-  padding: 20px;
+.form-check{
+  margin-right: -2px;
+  margin-top: 6px;
 }
 
+.radioBackground{
+  margin-left: 20px;
+  background-color: var(--theme1-toggle-blue);
+  padding: 0px 14px;
+  border-radius: 18px;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+}
+
+
+
+/* display area styling */
 
 .contain{
-	border-top-right-radius: 5px;
-	border-top-left-radius: 5px;
-	text-align: center;
-	background-color: white;
-	color: black;
-	border: 2px solid #CAC0C0;
+	border-radius: 8px;
+	background-color: var(--theme1-screen-blue);
+	color: white;
 	display: flex;
 	flex-wrap: wrap;
-	
-	
+	padding: 1px 10px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
 }
 
 .numDisplay{
 	font-size: 4.5em;
 	font-weight: 400;
+  margin-left: auto;
 }
 
 
