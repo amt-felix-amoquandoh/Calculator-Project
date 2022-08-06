@@ -59,18 +59,49 @@
   <!--cover ends-->
 
 <!--body below-->
-  <div class="container-fluid  projectBody">
-    <div class=" blue grid-wrapper">
-      <div class="box "></div>
-      <div class="box "></div>
-      <div class="box "></div>
-      <div class="box "></div>
-      <div class="box "></div>
-      <div class="box "></div>
-      <div class="box "></div>
-      <div class="box "></div>
-    </div>
-  </div>
+  <div class="container projectBody">
+    <div class="rows">
+
+			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3 greys">7</button>
+			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">8</button>
+			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">9</button>
+
+			<button class="col-lg-3 col-md-3 col-sm-3  oranges" type="button" id="multiplyBtn" onclick="multiply()">
+				x
+			</button>
+		</div>
+
+		<div class="rows">
+
+			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">4</button>
+			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">5</button>
+			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">6</button>
+
+			<button class="col-lg-3 col-md-3 col-sm-3  oranges" type="button" id="subtractBtn" onclick="minus()">
+				-
+			</button>
+		</div>
+
+		<div class="rows">
+
+			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">1</button>
+			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">2</button>
+			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">3</button>
+
+			<button class="col-lg-3 col-md-3 col-sm-3  oranges" type="button" id="addBtn" onclick="plus()">
+				+
+			</button>
+
+		</div>
+		<div class="rows">
+
+			<button id="numBtn" type="button" class="col-lg-6 col-md-6 col-sm-6  greys">0</button>
+
+			<button type="button" class="col-lg-3 col-md-3 col-sm-3  greys">.</button>
+
+
+			<button class="col-lg-3 col-md-3 col-sm-3  oranges" type="button" id="numbersSum">=</button>
+		</div>
 </div>
   <!--body ends here-->
   

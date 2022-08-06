@@ -158,6 +158,43 @@ body{
  
 }
 
+.rows{
+	font-size: 2.5rem;
+	display: flex;
+	flex-direction: row;
+}
+
+.oranges{
+	background: orange;	
+	border: none;
+	color: white;
+	border: 2px solid #CAC0C0;
+	font-weight: bolder;
+}
+
+.oranges:hover{
+	background: white;
+	color: orange;
+	padding: 25px 0;
+	
+	
+}
+
+.greys{
+	padding: 25px 0;
+	background-color: #B4AFAF;
+	border: 2px solid #CAC0C0;
+	color: white;
+	font-weight: bolder;
+}
+
+.greys:hover{
+	background: white;
+	color: black;
+	padding: 25px 0;	
+	
+}
+
 
 /** media queries for responsive interface **/
  /** tablet view **/
