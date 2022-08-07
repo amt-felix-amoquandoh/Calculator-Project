@@ -5,12 +5,12 @@
   --theme1-main-background: hsl(222, 26%, 31%);
   --theme1-toggle-blue:  hsl(223, 31%, 20%);
   --theme1-screen-blue: hsl(224, 36%, 15%);
-  --theme1-key-background: hsl(225, 21%, 49%);
-  --theme1-key-shadow: hsl(224, 28%, 35%);
+  --theme1-bluekey-hover: hsl(225, 21%, 49%);
+  --theme1-bluekey-background: hsl(224, 28%, 35%);
   --theme1-red-key: hsl(6, 63%, 50%);
   --theme1-red-shadow: hsl(6, 70%, 34%);
-  --theme1-hover-orange: hsl(30, 25%, 89%);
-  --theme1-hover-shadow: hsl(28, 16%, 65%);
+  --theme1-whitekeyhover: hsl(30, 25%, 89%);
+  --theme1-whitekeyshadow: hsl(28, 16%, 65%);
   --theme1-grayBlue-text: hsl(221, 14%, 31%);
   --color-white: hsl(0, 0, 100%);
   --color-black: rgb(0, 0, 0);
@@ -51,7 +51,7 @@
 body{
   background-color:var(--theme1-main-background);
   font-family: var(--calc-font-family);
-  
+  max-height: 100vh;  
 }
 
 .calcLayout{
@@ -60,10 +60,13 @@ body{
 }
 
 /* header styling */
+#header{  
+  margin-bottom: 20px;
+}
 .navbar{
   box-shadow: none;
   border: none;
-  padding: 1px 14px;
+  padding: 1px 15px;
 
 }
 .calcHeader{  
@@ -88,17 +91,30 @@ body{
 .radioBackground{
   margin-left: 20px;
   background-color: var(--theme1-toggle-blue);
-  padding: 0px 14px;
-  border-radius: 18px;
-  -webkit-border-radius: 22px;
-  -moz-border-radius: 18px;
-  -ms-border-radius: 18px;
-  -o-border-radius: 18px;
+  padding: 0px 22px;
+  border-radius: 22px;
+  margin-top: -7px;
+}
+
+.input-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.toggleDigits{
+  color: white;
+  margin-top: -15px;
+  margin-bottom: 3px;
+  text-align: center;
+  word-spacing: 15px;
+  margin-left: 65px;
 }
 
 
-
 /* display area styling */
+#displayArea{
+  margin-bottom: 10px;
+}
 
 .contain{
 	border-radius: 8px;
@@ -120,79 +136,68 @@ body{
 }
 
 
-
-@media only screen and (max-width: 600px ){
-  .topBar{
-      font-size: 0.5em;
-      padding: 0;
-  }
+/* Keys area styling */
+#keyArea{
+   padding: 1px 10px;
 }
-
-
-.grid-wrapper{
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
-
-
-.box{
- box-shadow: 2px 2px 2px 2px grey;
- background-color: rgb(61, 61, 80); 
- padding: 10px;
- margin: 10px;
-}
-
-.coverTop{
-  cursor: pointer;
-  grid-column: 1/-1;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-}
-
-
-.projectBody{
- 
+.keyBody{
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--theme1-toggle-blue); 
 }
 
 .rows{
 	font-size: 2.5rem;
+  margin: 25px;
+  gap: 25px;
 	display: flex;
 	flex-direction: row;
 }
 
-.oranges{
-	background: orange;	
-	border: none;
+.blueKeys{
+  background-color: var(--theme1-bluekey-background);
+  font-weight: bolder;
+  color: white;
+  border: none;
+}
+
+.blueKeys:hover{
+	background: var(--theme1-bluekey-hover);
+	color: white;	
+  border: none;
+}
+
+.col{
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+.orangeKey{
+	background-color: var(--theme1-red-key);
 	color: white;
-	border: 2px solid #CAC0C0;
 	font-weight: bolder;
+  border: none;
 }
 
-.oranges:hover{
+.orangeKey:hover{
 	background: white;
-	color: orange;
-	padding: 25px 0;
-	
-	
+	color: black;	
 }
 
-.greys{
-	padding: 25px 0;
-	background-color: #B4AFAF;
-	border: 2px solid #CAC0C0;
-	color: white;
+.whiteKeys{
+	background-color: var(--theme1-whitekeyshadow);
+	color: var(--theme1-grayBlue-text);
 	font-weight: bolder;
+  border: none;
+  /* box-shadow: 0 8px 8px -4px var(--theme1-whitekeyshadow); */
+  /* box-shadow: 0.5rem 0.1rem black, -0.5rem -0.1rem #ccc; */
+   box-shadow:  3px -3px 0 -5px black,  3px -3px 0 5px black;
 }
 
-.greys:hover{
-	background: white;
-	color: black;
-	padding: 25px 0;	
-	
+.whiteKeys:hover{
+	background: var(--theme1-whitekeyhover);
+	color: var(--theme1-grayBlue-text)
 }
 
 
@@ -207,4 +212,6 @@ body{
 @media only screen 
 and (min-device-width: 175px) 
 and (max-device-width: 764px)
-and (-webkit-min-device-pixel-ratio: 2){}
+and (-webkit-min-device-pixel-ratio: 2){
+  
+}

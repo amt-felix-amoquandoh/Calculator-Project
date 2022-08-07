@@ -16,93 +16,105 @@
 
 
 <body>
+  <!--Calc project starts below-->
 <div class="container calcLayout">
+  <!--header section below-->
+<section id="header">
   <nav class="navbar">
   
-      <a class="navbar-brand">
-        <h1 class="calcLabel">
-          calc
-         </h1>
-      </a>
-      <div class=" input-group w-auto">
-        <div class="radioArea">
-          <span class="text-white">THEME</span>
-        <div class="radioBackground">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-          </div>
-          
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-          </div>
-          
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" />
-          </div>
+    <a class="navbar-brand">
+      <h1 class="calcLabel">
+        calc
+       </h1>
+    </a>
+    <div class="input-group w-auto">
+      <span class="toggleDigits">1   2   3</span>
+      <div class="radioArea">
+        <span class="text-white">THEME</span>
+      <div class="radioBackground">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
         </div>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+        </div>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" />
         </div>
       </div>
-  
-  </nav>
-       <!--header below-->
-       
-      
-  <!--nav ends here-->
-
-
-  <!--Cover below-->
-  <div class="container app coverTop">
-    <div class="contain">
-      <span id="numbersSumDisplay" class="numDisplay">399,981</span>
+      </div>
     </div>
-  </div>
-  <!--cover ends-->
+
+</nav>
+</section>
+<!--header section ends here-->
+
+  <!--Display area below-->
+  <section id="displayArea">
+    <div class="container">
+      <div class="contain">
+        <span id="numbersSumDisplay" class="numDisplay">399,981</span>
+      </div>
+    </div>
+  </section>
+  <!--Display area ends here-->
 
 <!--body below-->
-  <div class="container projectBody">
-    <div class="rows">
-
-			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3 greys">7</button>
-			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">8</button>
-			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">9</button>
-
-			<button class="col-lg-3 col-md-3 col-sm-3  oranges" type="button" id="multiplyBtn" onclick="multiply()">
-				x
-			</button>
-		</div>
-
-		<div class="rows">
-
-			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">4</button>
-			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">5</button>
-			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">6</button>
-
-			<button class="col-lg-3 col-md-3 col-sm-3  oranges" type="button" id="subtractBtn" onclick="minus()">
-				-
-			</button>
-		</div>
-
-		<div class="rows">
-
-			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">1</button>
-			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">2</button>
-			<button id="numBtn" type="button" class="col-lg-3 col-md-3 col-sm-3  greys">3</button>
-
-			<button class="col-lg-3 col-md-3 col-sm-3  oranges" type="button" id="addBtn" onclick="plus()">
-				+
-			</button>
-
-		</div>
-		<div class="rows">
-
-			<button id="numBtn" type="button" class="col-lg-6 col-md-6 col-sm-6  greys">0</button>
-
-			<button type="button" class="col-lg-3 col-md-3 col-sm-3  greys">.</button>
-
-
-			<button class="col-lg-3 col-md-3 col-sm-3  oranges" type="button" id="numbersSum">=</button>
-		</div>
-</div>
+  <section id="keyArea">
+    <div class="container keyBody">
+      <div class="rows">
+        <button id="numBtn" type="button" class="col whiteKeys">7</button>
+        <button id="numBtn" type="button" class="col  whiteKeys">8</button>
+        <button id="numBtn" type="button" class="col  whiteKeys">9</button>
+  
+        <button class="col blueKeys" type="button" id="multiplyBtn" onclick="multiply()">
+          DEL
+        </button>
+      </div>
+  
+      <div class="rows">
+  
+        <button id="numBtn" type="button" class="col  whiteKeys">4</button>
+        <button id="numBtn" type="button" class="col  whiteKeys">5</button>
+        <button id="numBtn" type="button" class="col  whiteKeys">6</button>
+  
+        <button class="col whiteKeys" type="button" id="subtractBtn" onclick="minus()">
+          +
+        </button>
+      </div>
+  
+      <div class="rows">
+  
+        <button id="numBtn" type="button" class="col  whiteKeys">1</button>
+        <button id="numBtn" type="button" class="col  whiteKeys">2</button>
+        <button id="numBtn" type="button" class="col  whiteKeys">3</button>
+  
+        <button class="col whiteKeys" type="button" id="addBtn" onclick="plus()">
+          -
+        </button>
+  
+      </div>
+      <div class="rows">
+  
+        <button id="numBtn" type="button" class="col  whiteKeys">.</button>
+        <button id="numBtn" type="button" class="col  whiteKeys">0</button>
+        <button id="numBtn" type="button" class="col  whiteKeys">/</button>
+  
+        <button class="col whiteKeys" type="button" id="addBtn" onclick="plus()">
+          x
+        </button>
+  
+      </div>
+      <div class="rows">  
+        <button id="numBtn" type="button" class="col blueKeys">RESET</button>
+  
+        <button type="button" class="col orangeKey">=</button>
+  
+      </div>
+  </div>
+  </section>
   <!--body ends here-->
   
   
