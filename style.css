@@ -3,7 +3,7 @@
 /* Base styles color:  */
 :root{
   --theme1-main-background: hsl(222, 26%, 31%);
-  --theme1-toggle-blue:  hsl(223, 31%, 20%);
+  --theme1-toggle-background:  hsl(223, 31%, 20%);
   --theme1-screen-blue: hsl(224, 36%, 15%);
   --theme1-bluekey-background: hsl(225, 21%, 49%);
   --theme1-bluekey-shadow: hsl(224, 28%, 35%);
@@ -15,15 +15,16 @@
   --theme1-whitekey-shadow: hsl(28, 16%, 65%);
   --theme1-whitekey-hover: white;
   --theme1-number-color: hsl(221, 14%, 31%);
-  /* --theme2-main-background: hsl(0, 0%, 90%);
+  --theme2-main-background: hsl(0, 0%, 90%);
   --theme2-toggle-background:  hsl(0, 5%, 81%);
-  --theme2-keypad-background:  hsl(0, 5%, 81%);
   --theme2-screen-background: hsl(0, 0%, 93%);
-  --theme2-key-background: hsl(185, 42%, 37%);
-  --theme2-key-shadow: hsl(185, 58%, 25%);
+  --theme2-green-key: hsl(185, 42%, 37%);
+  --theme2-green-shadow: hsl(185, 58%, 25%);
+  --theme2-green-hover: hsl(185, 40%, 54%);
   --theme2-orange-key: hsl(25, 98%, 40%);
   --theme2-orange-shadow: hsl(25, 99%, 27%);
-  --theme2-darkyellow-text: hsl(60, 10%, 19%); */
+  --theme2-orange-hover: hsl(25, 67%, 54%);
+  --theme2-number-color: hsl(60, 10%, 19%);
   --theme3-main-background: hsl(268, 75%, 9%);
   --theme3-toggle-background:  hsl(268, 71%, 12%);
   --theme3-screen-background: hsl(268, 71%, 12%);
@@ -55,8 +56,8 @@ body{
 }
 
 body.theme2{
-  --theme1-main-background: hsl(0, 0%, 90%);
-  --theme1-toggle-blue:  hsl(223, 31%, 20%);
+  --theme1-main-background: hsl(222, 26%, 31%);
+  --theme1-toggle-background:  hsl(223, 31%, 20%);
   --theme1-screen-blue: hsl(224, 36%, 15%);
   --theme1-bluekey-background: hsl(225, 21%, 49%);
   --theme1-bluekey-shadow: hsl(224, 28%, 35%);
@@ -109,7 +110,7 @@ body.theme2{
 
 .radioBackground{
   margin-left: 20px;
-  background-color: var(--theme1-toggle-blue);
+  background-color: var(--theme1-toggle-background);
   padding: 0px 22px;
   border-radius: 22px;
   margin-top: -7px;
@@ -163,7 +164,7 @@ body.theme2{
   padding: 10px;
   border: none;
   border-radius: 10px;
-  background-color: var(--theme1-toggle-blue); 
+  background-color: var(--theme1-toggle-background); 
 }
 
 .rows{
