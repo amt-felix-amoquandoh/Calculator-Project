@@ -4,7 +4,7 @@
 :root{
   --theme1-main-background: hsl(222, 26%, 31%);
   --theme1-toggle-background:  hsl(223, 31%, 20%);
-  --theme1-screen-blue: hsl(224, 36%, 15%);
+  --theme1-screen-background: hsl(224, 36%, 15%);
   --theme1-bluekey-background: hsl(225, 21%, 49%);
   --theme1-bluekey-shadow: hsl(224, 28%, 35%);
   --theme1-bluekey-hover: rgb(145, 155, 187);
@@ -15,20 +15,9 @@
   --theme1-whitekey-shadow: hsl(28, 16%, 65%);
   --theme1-whitekey-hover: white;
   --theme1-number-color: hsl(221, 14%, 31%);
-  --theme2-main-background: hsl(0, 0%, 90%);
-  --theme2-toggle-background:  hsl(0, 5%, 81%);
-  --theme2-screen-background: hsl(0, 0%, 93%);
-  --theme2-green-key: hsl(185, 42%, 37%);
-  --theme2-green-shadow: hsl(185, 58%, 25%);
-  --theme2-green-hover: hsl(185, 40%, 54%);
-  --theme2-orange-key: hsl(25, 98%, 40%);
-  --theme2-orange-shadow: hsl(25, 99%, 27%);
-  --theme2-orange-hover: hsl(25, 67%, 54%);
-  --theme2-number-color: hsl(60, 10%, 19%);
-  --theme3-main-background: hsl(268, 75%, 9%);
+  /* --theme3-main-background: hsl(268, 75%, 9%);
   --theme3-toggle-background:  hsl(268, 71%, 12%);
   --theme3-screen-background: hsl(268, 71%, 12%);
-  --theme3-keypad-background: hsl(268, 71%, 12%);
   --theme3-key-background: hsl(281, 89%, 26%);
   --theme3-key-shadow: hsl(285, 91%, 52%);
   --theme3-cyan-keybackground: hsl(176, 100%, 44%);
@@ -36,7 +25,7 @@
   --theme3-voilet-keybackground: hsl(268, 47%, 21%);
   --theme3-voilet-keyshadow: hsl(290, 70%, 36%);
   --theme3-yellow-text: hsl(52, 100%, 62%);
-  --theme3-darkblue-text: hsl(198, 20%, 13%);
+  --theme3-darkblue-text: hsl(198, 20%, 13%); */
   --calc-font-family: 'League Spartan', sans-serif;
   --font-size: 32px;
 }
@@ -56,19 +45,47 @@ body{
 }
 
 body.theme2{
-  --theme1-main-background: hsl(222, 26%, 31%);
-  --theme1-toggle-background:  hsl(223, 31%, 20%);
-  --theme1-screen-blue: hsl(224, 36%, 15%);
-  --theme1-bluekey-background: hsl(225, 21%, 49%);
-  --theme1-bluekey-shadow: hsl(224, 28%, 35%);
-  --theme1-bluekey-hover: rgb(145, 155, 187);
-  --theme1-red-key: hsl(6, 63%, 50%);
-  --theme1-redkey-shadow: hsl(6, 70%, 34%);
-  --theme1-redkey-hover: rgb(213, 92, 79);;
+  --theme1-main-background: hsl(0, 0%, 90%);
+  --theme1-toggle-background:  hsl(0, 5%, 81%);
+  --theme1-screen-background: hsl(0, 0%, 93%);
+  --theme1-bluekey-background: hsl(185, 42%, 37%);
+  --theme1-bluekey-shadow: hsl(185, 58%, 25%);
+  --theme1-bluekey-hover: hsl(185, 40%, 54%);
+  --theme1-red-key: hsl(25, 98%, 40%);
+  --theme1-redkey-shadow: hsl(25, 99%, 27%);
+  --theme1-redkey-hover: hsl(25, 67%, 54%);
   --theme1-whitekey: hsl(30, 11%, 82%);
   --theme1-whitekey-shadow: hsl(28, 16%, 65%);
   --theme1-whitekey-hover: white;
-  --theme1-number-color: hsl(221, 14%, 31%);
+  --theme1-number-color: hsl(60, 10%, 19%);
+}
+
+body.theme3{
+  --theme1-main-background: hsl(268, 75%, 9%);
+  --theme1-toggle-background:  hsl(268, 71%, 12%);
+  --theme1-screen-background: hsl(0, 0%, 93%);
+  --theme1-bluekey-background: hsl(185, 42%, 37%);
+  --theme1-bluekey-shadow: hsl(185, 58%, 25%);
+  --theme1-bluekey-hover: hsl(185, 40%, 54%);
+  --theme1-red-key: hsl(25, 98%, 40%);
+  --theme1-redkey-shadow: hsl(25, 99%, 27%);
+  --theme1-redkey-hover: hsl(25, 67%, 54%);
+  --theme1-whitekey: hsl(30, 11%, 82%);
+  --theme1-whitekey-shadow: hsl(28, 16%, 65%);
+  --theme1-whitekey-hover: white;
+  --theme1-number-color: hsl(60, 10%, 19%);
+
+  --theme3-main-background: ;
+  --theme3-toggle-background:  ;
+  --theme3-screen-background: hsl(268, 71%, 12%);
+  --theme3-key-background: hsl(281, 89%, 26%);
+  --theme3-key-shadow: hsl(285, 91%, 52%);
+  --theme3-cyan-keybackground: hsl(176, 100%, 44%);
+  --theme3-cyan-keyshadow: hsl(177, 92%, 70%);
+  --theme3-voilet-keybackground: hsl(268, 47%, 21%);
+  --theme3-voilet-keyshadow: hsl(290, 70%, 36%);
+  --theme3-yellow-text: hsl(52, 100%, 62%);
+  --theme3-darkblue-text: hsl(198, 20%, 13%);
 }
 
 .calcLayout{
