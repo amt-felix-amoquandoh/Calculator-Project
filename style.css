@@ -15,17 +15,6 @@
   --theme1-whitekey-shadow: hsl(28, 16%, 65%);
   --theme1-whitekey-hover: white;
   --theme1-number-color: hsl(221, 14%, 31%);
-  /* --theme3-main-background: hsl(268, 75%, 9%);
-  --theme3-toggle-background:  hsl(268, 71%, 12%);
-  --theme3-screen-background: hsl(268, 71%, 12%);
-  --theme3-key-background: hsl(281, 89%, 26%);
-  --theme3-key-shadow: hsl(285, 91%, 52%);
-  --theme3-cyan-keybackground: hsl(176, 100%, 44%);
-  --theme3-cyan-keyshadow: hsl(177, 92%, 70%);
-  --theme3-voilet-keybackground: hsl(268, 47%, 21%);
-  --theme3-voilet-keyshadow: hsl(290, 70%, 36%);
-  --theme3-yellow-text: hsl(52, 100%, 62%);
-  --theme3-darkblue-text: hsl(198, 20%, 13%); */
   --calc-font-family: 'League Spartan', sans-serif;
   --font-size: 32px;
 }
@@ -63,29 +52,17 @@ body.theme2{
 body.theme3{
   --theme1-main-background: hsl(268, 75%, 9%);
   --theme1-toggle-background:  hsl(268, 71%, 12%);
-  --theme1-screen-background: hsl(0, 0%, 93%);
-  --theme1-bluekey-background: hsl(185, 42%, 37%);
-  --theme1-bluekey-shadow: hsl(185, 58%, 25%);
-  --theme1-bluekey-hover: hsl(185, 40%, 54%);
-  --theme1-red-key: hsl(25, 98%, 40%);
-  --theme1-redkey-shadow: hsl(25, 99%, 27%);
-  --theme1-redkey-hover: hsl(25, 67%, 54%);
-  --theme1-whitekey: hsl(30, 11%, 82%);
-  --theme1-whitekey-shadow: hsl(28, 16%, 65%);
-  --theme1-whitekey-hover: white;
-  --theme1-number-color: hsl(60, 10%, 19%);
-
-  --theme3-main-background: ;
-  --theme3-toggle-background:  ;
-  --theme3-screen-background: hsl(268, 71%, 12%);
-  --theme3-key-background: hsl(281, 89%, 26%);
-  --theme3-key-shadow: hsl(285, 91%, 52%);
-  --theme3-cyan-keybackground: hsl(176, 100%, 44%);
-  --theme3-cyan-keyshadow: hsl(177, 92%, 70%);
-  --theme3-voilet-keybackground: hsl(268, 47%, 21%);
-  --theme3-voilet-keyshadow: hsl(290, 70%, 36%);
-  --theme3-yellow-text: hsl(52, 100%, 62%);
-  --theme3-darkblue-text: hsl(198, 20%, 13%);
+  --theme1-screen-background: hsl(268, 71%, 12%);
+  --theme1-bluekey-background: hsl(281, 89%, 26%);
+  --theme1-bluekey-shadow: hsl(285, 91%, 52%);
+  --theme1-bluekey-hover: hsl(285, 80%, 68%);
+  --theme1-red-key: hsl(176, 100%, 44%);
+  --theme1-redkey-shadow: hsl(177, 92%, 70%);
+  --theme1-redkey-hover: hsl(176, 71%, 86%);
+  --theme1-whitekey: hsl(268, 47%, 21%);
+  --theme1-whitekey-shadow: hsl(290, 70%, 36%);
+  --theme1-whitekey-hover: hsl(52, 100%, 62%);
+  --theme1-number-color: hsl(52, 100%, 62%);
 }
 
 .calcLayout{
