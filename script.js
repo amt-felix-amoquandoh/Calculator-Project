@@ -26,7 +26,7 @@ if(thirdTheme){
 }
 
 theme1.addEventListener("click", function(){
-    bodyElement.classList.toggle("theme1");
+    bodyElement.classList.toggle("theme1" );
      if(bodyElement.classList.contains("theme1")){
         localStorage.setItem("firstTheme", "themeActive");
      } else{
