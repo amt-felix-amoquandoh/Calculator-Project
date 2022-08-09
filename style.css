@@ -2,7 +2,7 @@
 
 /* Base styles color:  */
 :root{
-  --theme1-main-background: hsl(222, 26%, 31%);
+  /* --theme1-main-background: hsl(222, 26%, 31%);
   --theme1-toggle-background:  hsl(223, 31%, 20%);
   --theme1-screen-background: hsl(224, 36%, 15%);
   --theme1-bluekey-background: hsl(225, 21%, 49%);
@@ -15,6 +15,8 @@
   --theme1-whitekey-shadow: hsl(28, 16%, 65%);
   --theme1-whitekey-hover: white;
   --theme1-number-color: hsl(221, 14%, 31%);
+  --theme1-otherkeys-color: white;
+  --theme1-text-color: white; */
   --calc-font-family: 'League Spartan', sans-serif;
   --font-size: 32px;
 }
@@ -32,6 +34,27 @@ body{
   font-family: var(--calc-font-family); 
 }
 
+body.theme1{
+  --theme1-main-background: hsl(222, 26%, 31%);
+  --theme1-toggle-background:  hsl(223, 31%, 20%);
+  --theme1-screen-background: hsl(224, 36%, 15%);
+  --theme1-bluekey-background: hsl(225, 21%, 49%);
+  --theme1-bluekey-shadow: hsl(224, 28%, 35%);
+  --theme1-bluekey-hover: rgb(145, 155, 187);
+  --theme1-red-key: hsl(6, 63%, 50%);
+  --theme1-redkey-shadow: hsl(6, 70%, 34%);
+  --theme1-redkey-hover: rgb(213, 92, 79);;
+  --theme1-whitekey: hsl(30, 11%, 82%);
+  --theme1-whitekey-shadow: hsl(28, 16%, 65%);
+  --theme1-whitekey-hover: white;
+  --theme1-number-color: hsl(221, 14%, 31%);
+  --theme1-otherkeys-color: white;
+  --theme1-text-color: white;
+  --calc-font-family: 'League Spartan', sans-serif;
+  --font-size: 32px;
+}
+
+
 body.theme2{
   --theme1-main-background: hsl(0, 0%, 90%);
   --theme1-toggle-background:  hsl(0, 5%, 81%);
@@ -46,6 +69,8 @@ body.theme2{
   --theme1-whitekey-shadow: hsl(28, 16%, 65%);
   --theme1-whitekey-hover: white;
   --theme1-number-color: hsl(60, 10%, 19%);
+  --theme1-otherkeys-color: white;
+  --theme1-text-color: hsl(60, 10%, 19%);
 }
 
 body.theme3{
@@ -57,11 +82,13 @@ body.theme3{
   --theme1-bluekey-hover: hsl(285, 80%, 68%);
   --theme1-red-key: hsl(176, 100%, 44%);
   --theme1-redkey-shadow: hsl(177, 92%, 70%);
-  --theme1-redkey-hover: hsl(176, 71%, 86%);
+  --theme1-redkey-hover: hsl(175, 44%, 65%);
   --theme1-whitekey: hsl(268, 47%, 21%);
   --theme1-whitekey-shadow: hsl(290, 70%, 36%);
-  --theme1-whitekey-hover: hsl(52, 100%, 62%);
+  --theme1-whitekey-hover: hsl(285, 67%, 48%);
   --theme1-number-color: hsl(52, 100%, 62%);
+  --theme1-otherkeys-color: white;
+  --theme1-text-color: hsl(52, 100%, 62%);
 }
 
 .calcLayout{
@@ -84,8 +111,12 @@ body.theme3{
   grid-column: 1/-1;
 }
 .calcLabel{
-  color: var(--theme1-whitekey-hover);
+  color: var(--theme1-text-color);
   font-size: 2.8rem;
+}
+
+.calcText{
+  color: var(--theme1-text-color);
 }
 
 .radioArea{
@@ -115,7 +146,7 @@ body.theme3{
 }
 
 .toggleDigits{
-  color: var(--theme1-whitekey-hover);
+  color: var(--theme1-text-color);
   margin-top: -15px;
   margin-bottom: 3px;
   text-align: center;
@@ -132,7 +163,7 @@ body.theme3{
 .contain{
 	border-radius: 8px;
 	background-color: var(--theme1-screen-background);
-	color: var(--theme1-whitekey-hover);
+	color: var(--theme1-text-color);
 	display: flex;
 	flex-wrap: wrap;
 	padding: 1px 10px;
@@ -171,7 +202,7 @@ body.theme3{
 .blueKeys{
   background-color: var(--theme1-bluekey-background);
   font-weight: bolder;
-  color: var(--theme1-whitekey-hover);
+  color: var(--theme1-otherkeys-color);
   border: none;  
   box-shadow:  -1px 3px 0 3px var(--theme1-bluekey-shadow),  -3px 3px 0 5px black;
 
@@ -189,7 +220,7 @@ body.theme3{
 
 .orangeKey{
 	background-color: var(--theme1-red-key);
-	color: var(--theme1-whitekey-hover);
+	color: var(--theme1-otherkeys-color);
 	font-weight: bolder;
   border: none;
   box-shadow:  -1px 3px 0 3px var(--theme1-redkey-shadow),  -3px 3px 0 5px black
