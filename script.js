@@ -58,3 +58,5 @@ let result = null;
 let decimalDot = false;
 
 
+calcNumber.forEach
+
