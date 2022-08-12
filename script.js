@@ -52,11 +52,21 @@ theme3.addEventListener("click", function(){
      }
 });
 
-let displayNum1 = "0";
-let displayNum2 = "0";
+let displayNum1 = " ";
+let displayNum2 = " ";
 let result = null;
 let decimalDot = false;
 
 
-calcNumber.forEach
+calcNumber.forEach( number => { 
+   number.addEventListener("click", e => {
+      if(e.target.innerText === "." && !decimalDot){
+         decimalDot = true;
+      } else if(e.target.innerText === "." && decimalDot){
+         return;
+      }
+      displayNum2 += e.target.innerText;
+      display.innerText = displayNum2;
+   })
+})
 

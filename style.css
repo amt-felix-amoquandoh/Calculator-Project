@@ -78,7 +78,8 @@ body.theme3{
 
 /* header styling */
 #header{  
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 .navbar{
   box-shadow: none;
@@ -137,7 +138,7 @@ body.theme3{
 
 /* display area styling */
 #displayArea{
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .contain{
