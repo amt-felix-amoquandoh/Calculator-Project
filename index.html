@@ -27,19 +27,32 @@
         calc
        </h1>
     </a>
+
     <div class="input-group w-auto">
+
       <span class="toggleDigits">1   2   3</span>
       <div class="radioArea">
         <span class="calcText">THEME</span>
+
+        
       <div class="radioBackground">
-        <div class="btn-group">
-          <button class="btn btntheme" id="togglebtn" ></button>
+        <div class="btn-group switch-theme">
+          
+          <button class="btn btntheme" id="togglebtn" >
+            <input id="on" name="state-d" type="radio" checked="" />
+        <label for="on" onclick=""></label>
+          </button>
+          
+          <button class="btn btntheme" id="togglebtn2" >
+            <input id="off" name="state-d" type="radio"  />
+            <label for="off"onclick=""></label>
+          </button>
         
           
-          <button class="btn btntheme" id="togglebtn2" ></button>
-        
-          
-          <button class="btn btntheme" id="togglebtn3" ></button>
+          <button class="btn btntheme" id="togglebtn3" >
+            <input  id="na" name="state-d" type="radio" checked="checked"  />
+            <label for="na" class="disabled" onclick=""></label>
+          </button>
         </div>
       </div>
       </div>
@@ -51,10 +64,11 @@
 
   <!--Display area below-->
   <section id="displayArea">
-    <div class="container">
-      <div class="contain">
-        <span id="numbersSumDisplay" class="numDisplay">399,981</span>
-      </div>
+    <div class="container contain">
+      
+        <div  class="numDisplay"><span id="numbersSumDisplay">0</span></div>
+        <div class="showOperation"> <span id="operationDisplay">3333</span></div>
+      
     </div>
   </section>
   <!--Display area ends here-->

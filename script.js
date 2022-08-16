@@ -1,6 +1,7 @@
 const display = document.getElementById("numbersSumDisplay");
-const calcNumber = document.getElementById("numBtn");
-const operator =  document.getElementById("operatorBtn");
+const Opdisplay = document.getElementById("operationDisplay");
+const calcNumber = document.querySelectorAll("#numBtn");
+const operator =  document.querySelectorAll("#operatorBtn");
 const reset = document.getElementById("resetBtn");
 const clearLast = document.getElementById("clearBtn");
 const equalTo = document.getElementById("equalBtn");
@@ -52,21 +53,71 @@ theme3.addEventListener("click", function(){
      }
 });
 
-let displayNum1 = " ";
-let displayNum2 = " ";
+
+let displayNum = "";
+let displayOp = "";
 let result = null;
+let lastOperation = "";
 let decimalDot = false;
 
 
+// number display method
 calcNumber.forEach( number => { 
-   number.addEventListener("click", e => {
+   number.addEventListener("click", (e) => {
       if(e.target.innerText === "." && !decimalDot){
          decimalDot = true;
       } else if(e.target.innerText === "." && decimalDot){
          return;
       }
-      displayNum2 += e.target.innerText;
-      display.innerText = displayNum2;
+     
+      displayNum += e.target.innerText;
+      display.innerText = displayNum
    })
 })
+
+// operation method
+operator.forEach( operation => {
+   operation.addEventListener("click", (e)=>{
+      if (!displayNum) return;
+      decimalDot = false;
+      const operatorName = e.target.innerText;
+      if(displayNum && lastOperation){
+         mathOperation();
+      } else {
+         result = parseFloat(displayNum); 
+      }
+      clearDisplay(operatorName);
+   })
+});
+
+function clearDisplay(name = ""){
+   
+   displayNum = " ";
+}
+
+function mathOperation (){
+   if(lastOperation === "x"){
+      result = parseFloat(result) * parseFloat(displayNum)
+   } else if (lastOperation === "+"){
+      result = parseFloat(result) + parseFloat(displayNum)
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

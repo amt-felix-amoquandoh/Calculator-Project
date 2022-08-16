@@ -32,6 +32,7 @@
 body{
   background-color:var(--theme1-main-background);
   font-family: var(--calc-font-family); 
+  transition: background-color .25s, color .25s;
 }
 
 
@@ -106,12 +107,6 @@ body.theme3{
   flex-direction: row;
 }
 
-.form-check{
-  margin-right: -2px;
-  margin-top: 6px;
-}
-
-
 
 .radioBackground{
   margin-left: 20px;
@@ -119,11 +114,14 @@ body.theme3{
   padding: 0px 22px;
   border-radius: 22px;
   margin-top: -7px;
+  border: 1px solid orange;
 }
 
 .input-group{
   display: flex;
   flex-direction: column;
+  border: 1px solid rgb(255, 47, 82);
+  margin-left: 20px;
 }
 
 .toggleDigits{
@@ -135,8 +133,41 @@ body.theme3{
   margin-left: 65px;
 }
 
+.btn{
+  border: 1px solid white;
+  margin-left: -33px;
+  background-color: gold;
+}
+
+
+.switch-theme {
+  border: 1px solid green;
+   border-radius: 2px;
+   width: 90px;
+ }
+ .switch-theme input {
+  position: absolute;
+  opacity: 0;
+  width: 30%;
+  
+ }
+ .switch-theme input + label {
+  padding: 6px;
+  color: black;
+  cursor: pointer;
+  border: 1px solid yellow;
+  margin: -5px;
+ }
+ .switch-theme input:checked + label {
+  background: red;
+  border-radius: 50%;
+ }
+ 
+
+
 
 /* display area styling */
+
 #displayArea{
   margin-bottom: 40px;
 }
@@ -148,16 +179,20 @@ body.theme3{
 	display: flex;
 	flex-wrap: wrap;
 	padding: 1px 10px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	-ms-border-radius: 8px;
-	-o-border-radius: 8px;
 }
 
 .numDisplay{
 	font-size: 4.5em;
 	font-weight: 400;
   margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -10px;
+  margin-top: 5px
+}
+
+.showOperation{
+  font-size: larger;
 }
 
 
