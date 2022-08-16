@@ -4,7 +4,7 @@ const calcNumber = document.querySelectorAll("#numBtn");
 const operator =  document.querySelectorAll("#operatorBtn");
 const reset = document.getElementById("resetBtn");
 const clearLast = document.getElementById("clearBtn");
-const equalTo = document.getElementById("equalBtn");
+const equalTo = document.querySelector("#equalBtn");
 
 const bodyElement = document.body;
 const theme1 = document.getElementById("togglebtn");
@@ -86,11 +86,13 @@ operator.forEach( operation => {
       } else {
          result = parseFloat(displayNum); 
       }
-      clearDisplay(operatorName);
+      updateDisplay(operatorName);
    })
 });
 
-function clearDisplay(name = ""){
+function updateDisplay(name = ""){
+   displayOp += displayNum + " " + name + "";
+   Opdisplay.innerText = displayOp;
    
    displayNum = " ";
 }
@@ -100,8 +102,25 @@ function mathOperation (){
       result = parseFloat(result) * parseFloat(displayNum)
    } else if (lastOperation === "+"){
       result = parseFloat(result) + parseFloat(displayNum)
+   } else if (lastOperation === "-"){
+      result = parseFloat(result) - parseFloat(displayNum)
+   } else if (lastOperation === "/"){
+      result = parseFloat(result) / parseFloat(displayNum)
+   } else if (lastOperation === "%"){
+      result = parseFloat(result) % parseFloat(displayNum)
    }
 }
+
+equalTo.addEventListener("click", (e) => {
+   console.log("yewwwwwwwwwwwww")
+   if (!displayNum || displayOp) return;
+   haveDot = false;
+   mathOperation();
+   updateDisplay();
+   display.innerText = result;
+   displayNum = result;
+   displayOp = " ";
+})
 
 
 

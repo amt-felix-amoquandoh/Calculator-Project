@@ -170,15 +170,16 @@ body.theme3{
 
 #displayArea{
   margin-bottom: 40px;
-}
-
-.contain{
-	border-radius: 8px;
+  	border-radius: 8px;
 	background-color: var(--theme1-screen-background);
 	color: var(--theme1-text-color);
 	display: flex;
 	flex-wrap: wrap;
 	padding: 1px 10px;
+}
+
+.contain{
+
 }
 
 .numDisplay{
