@@ -40,7 +40,29 @@ class MainCalculator {
     calculate(){
         let calculation;
         const oldNumber = parseFloat(this.oldNumber);
-        const newNumber = parseFloat(this.newNumber)
+        const newNumber = parseFloat(this.newNumber);
+        if (isNaN(oldNumber) || isNaN(newNumber)) return;
+        switch(this.operation){
+            case "+":
+                calculation = oldNumber + newNumber
+                break; 
+                case "-":
+                calculation = oldNumber - newNumber
+                break; 
+                case "*":
+                calculation = oldNumber * newNumber
+                break; 
+                case "/":
+                calculation = oldNumber / newNumber
+                break; 
+                case "%":
+                calculation = oldNumber % newNumber
+                break; 
+            default: return;
+        }
+        this.mainDisplay = calculation;
+        this.operation = undefined;
+        this.operationDisplay = " ";
     }
 
     updateScreen(){
@@ -67,7 +89,7 @@ operator.forEach( button => {
     })
 })
 
-equalTo.addEventListener( "click", button => {
+equalTo.addEventListener( "click", () => {
     calculator.calculate();
     calculator.updateScreen();
 })
