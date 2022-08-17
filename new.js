@@ -2,7 +2,7 @@ const mainDisplayText = document.querySelector("#numbersSumDisplay");
 const operationDisplayText = document.querySelector("#operationDisplay");
 const calcNumber = document.querySelectorAll("#numBtn");
 const operator =  document.querySelectorAll("#operatorBtn");
-const equalTo = document.querySelector("#equalBtn");
+const equalTo = document.getElementById("equalBtn");
 const clearLast = document.getElementById("clearBtn");
 const reset = document.getElementById("resetBtn");
 
@@ -14,10 +14,12 @@ class MainCalculator {
         this.resetAll();
     }
 
-    clearPrevious(){}
+    clearPrevious(){
+        this.mainDisplay = this.mainDisplay.toString().slice(0,-1)
+    }
 
     resetAll(){
-        this.mainDisplay= "";
+        this.mainDisplay = "";
         this.operationDisplay = "";
         this.operator = undefined
     }
@@ -39,8 +41,8 @@ class MainCalculator {
 
     calculate(){
         let calculation;
-        const oldNumber = parseFloat(this.oldNumber);
-        const newNumber = parseFloat(this.newNumber);
+        const oldNumber = parseFloat(this.operationDisplay);
+        const newNumber = parseFloat(this.mainDisplay);
         if (isNaN(oldNumber) || isNaN(newNumber)) return;
         switch(this.operation){
             case "+":
@@ -67,7 +69,10 @@ class MainCalculator {
 
     updateScreen(){
         this.mainDisplayText.innerText = this.mainDisplay;
-        this.operationDisplayText.innerText = this.operationDisplay
+        if(this.operation != null){
+            this.operationDisplayText.innerText = 
+            `${this.operationDisplay} ${this.operation}`
+        }
     }
 }
 
@@ -87,9 +92,20 @@ operator.forEach( button => {
         calculator.selectOperator(button.innerText);
         calculator.updateScreen();
     })
+});
+
+equalTo.addEventListener( "click", button => {
+    console.log("pussyy")
+    calculator.calculate();
+    calculator.updateScreen();
 })
 
-equalTo.addEventListener( "click", (button) => {
-    calculator.calculate();
+reset.addEventListener( "click", button => {
+    calculator.resetAll();
+    calculator.updateScreen();
+})
+
+clearLast.addEventListener( "click", button => {
+    calculator.clearPrevious();
     calculator.updateScreen();
 })
