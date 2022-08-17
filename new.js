@@ -67,13 +67,36 @@ class MainCalculator {
         this.operationDisplay = " ";
     }
 
+    helpUpdateScreen(number){
+        const stringedNum = number.toString();
+        const integerNum = parseFloat(stringedNum.split(".")[0]);
+        const decimalNum = stringedNum.split(".")[1];
+        let integerText;
+        if (isNaN(integerNum)) {
+            integerText = " ";
+        } else {
+            integerText = integerNum.toLocaleString( "en", {
+                maximumFractionDigits: 0
+            })
+        }   
+        if (decimalNum != null){
+            return `${integerText}.${decimalNum}`
+        } else {
+            return integerText;
+        }   
+    }
+
     updateScreen(){
-        this.mainDisplayText.innerText = this.mainDisplay;
+        this.mainDisplayText.innerText = this.helpUpdateScreen(this.mainDisplay);
         if(this.operation != null){
             this.operationDisplayText.innerText = 
-            `${this.operationDisplay} ${this.operation}`
+            `${this.helpUpdateScreen(this.mainDisplay)} ${this.operation}`
+        } else{
+            this.operationDisplayText.innerText = " ";
         }
     }
+
+    
 }
 
  
@@ -95,7 +118,6 @@ operator.forEach( button => {
 });
 
 equalTo.addEventListener( "click", button => {
-    console.log("pussyy")
     calculator.calculate();
     calculator.updateScreen();
 })
@@ -109,3 +131,6 @@ clearLast.addEventListener( "click", button => {
     calculator.clearPrevious();
     calculator.updateScreen();
 })
+
+
+// Toggle Switch codes
