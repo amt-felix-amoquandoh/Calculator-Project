@@ -89,7 +89,7 @@ operator.forEach( button => {
     })
 })
 
-equalTo.addEventListener( "click", () => {
+equalTo.addEventListener( "click", (button) => {
     calculator.calculate();
     calculator.updateScreen();
 })
