@@ -91,10 +91,11 @@ operator.forEach( operation => {
 });
 
 function updateDisplay(name = ""){
-   displayOp += displayNum + " " + name + "";
+   displayOp += displayNum + " " + name + " ";
    Opdisplay.innerText = displayOp;
-   
+   display.innerText = " ";
    displayNum = " ";
+   display.innerText = result;
 }
 
 function mathOperation (){
@@ -112,14 +113,14 @@ function mathOperation (){
 }
 
 equalTo.addEventListener("click", (e) => {
-   console.log("yewwwwwwwwwwwww")
-   if (!displayNum || displayOp) return;
+   if (!displayOp || !displayNum ) return;
    haveDot = false;
    mathOperation();
    updateDisplay();
-   display.innerText = result;
+   
    displayNum = result;
    displayOp = " ";
+   
 })
 
 
