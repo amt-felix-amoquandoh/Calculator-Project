@@ -36,7 +36,7 @@ body{
 }
 
 
-.theme2{
+body.theme2{
   --theme1-main-background: hsl(0, 0%, 90%);
   --theme1-toggle-background:  hsl(0, 5%, 81%);
   --theme1-screen-background: hsl(0, 0%, 93%);
@@ -173,36 +173,6 @@ body.theme3{
 
 
 
-/* 
-.btn > input{
-  display: inline;
-}
-
-
-.switch-theme {
-  border: 1px solid green;
-   border-radius: 2px;
-   width: 90px;
- }
- .switch-theme input {
-  position: absolute;
-  opacity: 0;
-  width: 30%;
-  
- }
- .switch-theme input + label {
-  padding: 6px;
-  color: black;
-  cursor: pointer;
-  border: 1px solid yellow;
-  margin: -5px;
- }
- .switch-theme input:checked + label {
-  background: red;
-  border-radius: 50%;
- } */
-
-
 
 
 /* display area styling */
@@ -220,6 +190,7 @@ body.theme3{
   word-wrap: break-word;
   word-break: break-all;
   grid-column: 1/-1;
+  height: 120px;
 }
 
 
@@ -231,8 +202,9 @@ body.theme3{
  
 }
 
-.showOperation{
+.showOperation {
   font-size: larger;
+  margin-bottom: -15px;
 }
 
 

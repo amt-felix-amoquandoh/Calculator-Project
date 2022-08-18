@@ -52,7 +52,7 @@ class MainCalculator {
                 case "-":
                 calculation = oldNumber - newNumber
                 break; 
-                case "*":
+                case "x":
                 calculation = oldNumber * newNumber
                 break; 
                 case "/":
