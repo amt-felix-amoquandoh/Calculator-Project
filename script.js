@@ -1,143 +1,68 @@
-const display = document.getElementById("numbersSumDisplay");
-const Opdisplay = document.getElementById("operationDisplay");
-const calcNumber = document.querySelectorAll("#numBtn");
-const operator =  document.querySelectorAll("#operatorBtn");
-const reset = document.getElementById("resetBtn");
-const clearLast = document.getElementById("clearBtn");
-const equalTo = document.querySelector("#equalBtn");
+let toggleSwitch = document.getElementsByClassName('redButton')[0];
+ const bodyElement = document.body;
+ const firstTheme = localStorage.getItem("firstTheme");
+ const secondTheme = localStorage.getItem("secondTheme");
+ const thirdTheme = localStorage.getItem("thirdTheme");
 
-const bodyElement = document.body;
-const theme1 = document.getElementById("togglebtn");
-const theme2 = document.getElementById("togglebtn2");
-const theme3 = document.getElementById("togglebtn3");
-const firstTheme = localStorage.getItem("firstTheme");
-const secondTheme = localStorage.getItem("secondTheme");
-const thirdTheme = localStorage.getItem("thirdTheme");
 
-if(firstTheme){
-    bodyElement.classList.add("theme1")
+ if(firstTheme){
+  bodyElement.classList.add("theme1")
 } 
 
 if(secondTheme){
-    bodyElement.classList.add("theme2")
+  bodyElement.classList.add("theme2")
 } 
 
 if(thirdTheme){
-    bodyElement.classList.add("theme3")
+  bodyElement.classList.add("theme3")
 }
 
-theme1.addEventListener("click", function(){
-    bodyElement.classList.toggle("theme1" );
-     if(bodyElement.classList.contains("theme1")){
-        localStorage.setItem("firstTheme", "themeActive");
-     } else{
-        localStorage.removeItem("firstTheme");
-     }
-});
-
-theme2.addEventListener("click", function(){
-    bodyElement.classList.toggle("theme2");
-     if(bodyElement.classList.contains("theme2")){
-        localStorage.setItem("secondTheme", "themeActive");
-     } else{
-        localStorage.removeItem("secondTheme");
-     }
-});
-
-theme3.addEventListener("click", function(){
-    bodyElement.classList.toggle("theme3");
-     if(bodyElement.classList.contains("theme3")){
-        localStorage.setItem("thirdTheme", "themeActive");
-     } else{
-        localStorage.removeItem("thirdTheme");
-     }
-});
-
-
-let displayNum = "";
-let displayOp = "";
-let result = null;
-let lastOperation = "";
-let decimalDot = false;
-
-
-// number display method
-calcNumber.forEach( number => { 
-   number.addEventListener("click", (e) => {
-      if(e.target.innerText === "." && !decimalDot){
-         decimalDot = true;
-      } else if(e.target.innerText === "." && decimalDot){
-         return;
-      }
-     
-      displayNum += e.target.innerText;
-      display.innerText = displayNum
-   })
-})
-
-// operation method
-operator.forEach( operation => {
-   operation.addEventListener("click", (e)=>{
-      if (!displayNum) return;
-      decimalDot = false;
-      const operatorName = e.target.innerText;
-      if(displayNum && lastOperation){
-         mathOperation();
-      } else {
-         result = parseFloat(displayNum); 
-      }
-      updateDisplay(operatorName);
-   })
-});
-
-function updateDisplay(name = ""){
-   displayOp += displayNum + " " + name + " ";
-   Opdisplay.innerText = displayOp;
-   display.innerText = " ";
-   displayNum = " ";
-   display.innerText = result;
-}
-
-function mathOperation (){
-   if(lastOperation === "x"){
-      result = parseFloat(result) * parseFloat(displayNum)
-   } else if (lastOperation === "+"){
-      result = parseFloat(result) + parseFloat(displayNum)
-   } else if (lastOperation === "-"){
-      result = parseFloat(result) - parseFloat(displayNum)
-   } else if (lastOperation === "/"){
-      result = parseFloat(result) / parseFloat(displayNum)
-   } else if (lastOperation === "%"){
-      result = parseFloat(result) % parseFloat(displayNum)
-   }
-}
-
-equalTo.addEventListener("click", (e) => {
-   if (!displayOp || !displayNum ) return;
-   haveDot = false;
-   mathOperation();
-   updateDisplay();
-   
-   displayNum = result;
-   displayOp = " ";
-   
-})
 
 
 
 
 
+        function theme1() {
+            toggleSwitch.classList.add('horizTranslate1');
+            toggleSwitch.classList.remove('horizTranslate2');
+            toggleSwitch.classList.remove('horizTranslate3');
+            bodyElement.classList.toggle("theme1" );
+            if(bodyElement.classList.contains("theme1")){
+               localStorage.setItem("firstTheme", "themeActive");
+            } else{
+               localStorage.removeItem("firstTheme");
+            }
+                      
+           
+        }
 
+        function theme2() {
+            toggleSwitch.classList.add('horizTranslate2');
+            toggleSwitch.classList.remove('horizTranslate3');
+            toggleSwitch.classList.remove('horizTranslate1');
+            bodyElement.classList.toggle("theme2");
+            if(bodyElement.classList.contains("theme2")){
+               localStorage.setItem("secondTheme", "themeActive");
+            } else{
+               localStorage.removeItem("secondTheme");
+            }
+            
+        }
 
+        function theme3() {
+            toggleSwitch.classList.add('horizTranslate3');
+            toggleSwitch.classList.remove('horizTranslate2');
+            toggleSwitch.classList.remove('horizTranslate1');
+            bodyElement.classList.toggle("theme3");
+            if(bodyElement.classList.contains("theme3")){
+               localStorage.setItem("thirdTheme", "themeActive");
+            } else{
+               localStorage.removeItem("thirdTheme");
+            }
 
-
-
-
-
-
-
-
-
-
-
-
+            // document.body.style.backgroundColor = "red"
+            // document.getElementById("outerContainer").style.backgroundColor = "#000000"
+            // document.getElementById("buttonContainer").style.backgroundColor = "#444444"
+            // document.getElementById("legendTextContainer").style.color = "#E2D241"
+            
+        }
