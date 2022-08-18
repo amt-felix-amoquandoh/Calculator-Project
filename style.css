@@ -316,17 +316,18 @@ body.theme3{
    /* Mobile devices view */
 
    @media only screen 
-   and (min-device-width: 325px) 
+   and (min-device-width: 225px) 
    and (max-device-width: 780px) 
    and (-webkit-min-device-pixel-ratio: 2){
     body{
       margin: 0px 2px;
       padding: 0;
     }
+
    .calcLayout{
     width: 100vw;
     padding: 10px;
-    
+    height: 90vh;    
    }
 
   #header{  
@@ -363,5 +364,8 @@ body.theme3{
   gap: 25px;	
 }
 
+.col{
+  padding: 0;
+}
   
 }
