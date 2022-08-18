@@ -177,7 +177,7 @@ if(thirdTheme){
             toggleSwitch.classList.add('horizTranslate2');
             toggleSwitch.classList.remove('horizTranslate3');
             toggleSwitch.classList.remove('horizTranslate1');
-            bodyElement.classList.toggle("theme2");
+            bodyElement.classList.toggle("theme2");            
             if(bodyElement.classList.contains("theme2")){
                localStorage.setItem("secondTheme", "themeActive");
             } else{
