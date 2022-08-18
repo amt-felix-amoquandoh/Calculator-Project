@@ -156,9 +156,6 @@ if(thirdTheme){
 
 
 
-
-
-
         function theme1() {
             toggleSwitch.classList.add('horizTranslate1');
             toggleSwitch.classList.remove('horizTranslate2');
@@ -177,7 +174,7 @@ if(thirdTheme){
             toggleSwitch.classList.add('horizTranslate2');
             toggleSwitch.classList.remove('horizTranslate3');
             toggleSwitch.classList.remove('horizTranslate1');
-            bodyElement.classList.toggle("theme2");            
+            bodyElement.classList.toggle("theme2");        
             if(bodyElement.classList.contains("theme2")){
                localStorage.setItem("secondTheme", "themeActive");
             } else{
@@ -190,7 +187,7 @@ if(thirdTheme){
             toggleSwitch.classList.add('horizTranslate3');
             toggleSwitch.classList.remove('horizTranslate2');
             toggleSwitch.classList.remove('horizTranslate1');
-            bodyElement.classList.toggle("theme3");
+            bodyElement.classList.toggle("theme3");         
             if(bodyElement.classList.contains("theme3")){
                localStorage.setItem("thirdTheme", "themeActive");
             } else{
