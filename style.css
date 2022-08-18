@@ -115,6 +115,42 @@ body.theme3{
   border-radius: 22px;
   margin-top: -7px;
   border: 1px solid orange;
+  position: relative;
+}
+
+.toggleBtnMain{
+  width:16px; height:16px; 
+  background-color:#DB3D2B; 
+  border-radius:8px; 
+  position:relative; 
+  top:6px; 
+  left:6px;
+}
+
+.radioGroup{
+  left:22px; 
+  display:inline-block;
+  position:absolute; 
+  top:23px; 
+  color:#ffffff;
+  font-family:Arial; 
+  font-size:10pt;
+  text-align:center;
+
+}
+
+.redButton.horizTranslate2 {
+  -webkit-transition: -webkit-transform 0.1s linear; 
+  -webkit-transform: translateX(20px);
+ }
+
+.redButton.horizTranslate3 {
+  -webkit-transition: -webkit-transform 0.1s linear; 
+  -webkit-transform: translateX(40px);
+ }
+.redButton.horizTranslate1 { 
+ -webkit-transition: -webkit-transform 0.1s linear; 
+ -webkit-transform: translateX(0px);
 }
 
 .input-group{
@@ -136,7 +172,11 @@ body.theme3{
 .btn{
   border: 1px solid white;
   margin-left: -33px;
-  background-color: gold;
+ 
+}
+/* 
+.btn > input{
+  display: inline;
 }
 
 
@@ -161,9 +201,8 @@ body.theme3{
  .switch-theme input:checked + label {
   background: red;
   border-radius: 50%;
- }
+ } */
 
- 
 
 
 

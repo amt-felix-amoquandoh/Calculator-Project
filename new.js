@@ -134,3 +134,15 @@ clearLast.addEventListener( "click", button => {
 
 
 // Toggle Switch codes
+let toggleSwitch = document.getElementsByClassName('toggleBtnMain')[0];
+
+function theme2() {
+    console.log("wotw33333333333")
+    toggleSwitch.classList.add('horizTranslate1');
+    toggleSwitch.classList.remove('horizTranslate2');
+    toggleSwitch.classList.remove('horizTranslate3');
+    document.getElementById("outerContainer").style.backgroundColor = "#4A5B7E"
+    document.getElementById("buttonContainer").style.backgroundColor = "#222D41"
+    document.getElementById("legendTextContainer").style.color = "#ffffff"
+    doStuff(1)
+}

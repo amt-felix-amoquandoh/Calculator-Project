@@ -12,6 +12,7 @@
   rel="stylesheet"
 />
   <link rel="stylesheet" href="./style.css"/>
+  
 </head>
 
 
@@ -34,18 +35,17 @@
       <div class="radioArea">
         <span class="calcText">THEME</span>
 
+        <div class="radioBackground">
+          <div class="btn-group">
+            <div class="toggleBtnMain"></div>
+          </div>
+          <div id="radioGroup">
+            <div class="toggleTxt"></div>
+            <div class="toggleTxt" onclick="theme2()"></div>
+            <div class="toggleTxt"></div>
+          </div>
+        </div>
 
-        <div id="outerContainer">
-          <div id="buttonContainer">
-              <div class="redButton"></div>
-          </div>
-      
-         <div id="legendTextContainer">
-              <div class="legendText" onclick="go_to_1()">1</div><div
-                   class="legendText" onclick="go_to_2()">2</div><div
-                   class="legendText" onclick="go_to_3()">3</div>
-          </div>
-      </div>
 <!--         
       <div class="radioBackground">
         <div class="btn-group switch-theme">
