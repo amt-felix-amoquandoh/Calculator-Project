@@ -231,6 +231,7 @@ body.theme3{
   gap: 25px;
 	display: flex;
 	flex-direction: row;
+  align-items: center;
 }
 
 .blueKeys{
@@ -239,7 +240,7 @@ body.theme3{
   color: var(--theme1-otherkeys-color);
   border: none;  
   box-shadow:  -1px 3px 0 3px var(--theme1-bluekey-shadow),  -3px 3px 0 5px black;
-
+  
 }
 
 .blueKeys:active {
@@ -300,16 +301,36 @@ body.theme3{
  @media (min-device-width: 764px) 
   and (max-device-width: 990px)
   and (-webkit-min-device-pixel-ratio: 1){
+    body{
+      margin: 0px 2px;
+      padding: 0;
+    }
 
+   .calcLayout{
+    width: 100vw;
+    padding: 10px;
+    height: 90vh;    
+   }
 
+  #header{  
+    width: 95vw;
+    margin: 0px 5px ;
+  }
 
+  .display{   
+    padding: 0px 20px;
+    width: 95vw;
+    margin: 5px 0;
+    margin-right: 10px;
+    height: 80px;
+  }
   }
 
    /* Mobile devices view */
 
    @media only screen 
    and (min-device-width: 225px) 
-   and (max-device-width: 780px) 
+   and (max-device-width: 680px) 
    and (-webkit-min-device-pixel-ratio: 2){
     body{
       margin: 0px 2px;
@@ -325,6 +346,10 @@ body.theme3{
   #header{  
     width: 95vw;
     margin: 0px 5px ;
+  }
+
+  .radioArea{
+    margin-top: -8px;
   }
 
   .display{   
@@ -349,6 +374,12 @@ body.theme3{
   .keyBody{    
     height: auto;
     padding: 5px;
+ }
+
+ .blueKeys, .orangeKey, .whiteKeys{
+  padding-top: 20px;
+  font-size: 0.8em;
+  
  }
 
  .rows{
