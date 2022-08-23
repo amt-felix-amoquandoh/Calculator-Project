@@ -45,7 +45,7 @@ body.theme2{
   --theme1-red-key: hsl(25, 98%, 40%);
   --theme1-redkey-shadow: hsl(25, 99%, 27%);
   --theme1-redkey-hover: hsl(25, 67%, 54%);
-  --theme1-whitekey: hsl(30, 11%, 82%);
+  --theme1-whitekey: hsl(30, 24%, 93%);
   --theme1-whitekey-shadow: hsl(28, 16%, 65%);
   --theme1-whitekey-hover: white;
   --theme1-number-color: hsl(60, 10%, 19%);
@@ -192,24 +192,42 @@ body.theme3{
 	color: var(--theme1-text-color);
 	display: flex;
   align-items: flex-end;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;	
-	padding: 1px 10px;
+	padding: 5px 10px;
   height: 120px;
   word-wrap: break-word;
   word-break: break-all;
+  text-overflow: ellipsis;  
   overflow: auto;
-  text-overflow: ellipsis;
-  
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track { 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--theme1-bluekey-background); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme1-bluekey-background); 
 }
 
 
 .numDisplay{
-	font-size: 3.5rem;
+	font-size: 3.2rem;
 	font-weight: 400;
+  margin-top: 5px;   
   margin-bottom: -10px;
-  margin-top: 5px; 
-  
 }
 
 .showOperation {
@@ -240,7 +258,7 @@ body.theme3{
   font-weight: bolder;
   color: var(--theme1-otherkeys-color);
   border: none;  
-  box-shadow:  -1px 3px 0 3px var(--theme1-bluekey-shadow),  -3px 3px 0 5px black;
+  box-shadow:  -1px 3px 0 3px var(--theme1-bluekey-shadow),  -3px 3px 0 5px var(--theme1-toggle-background);
   
 }
 
@@ -265,7 +283,7 @@ body.theme3{
 	color: var(--theme1-otherkeys-color);
 	font-weight: bolder;
   border: none;
-  box-shadow:  -1px 3px 0 3px var(--theme1-redkey-shadow),  -3px 3px 0 5px black
+  box-shadow:  -1px 3px 0 3px var(--theme1-redkey-shadow),  -3px 3px 0 5px var(--theme1-toggle-background);
 }
 
 .orangeKey:active {
@@ -283,7 +301,7 @@ body.theme3{
 	color: var(--theme1-number-color);
 	font-weight: bolder;
   border: none;
-   box-shadow:  -1px 3px 0 3px var(--theme1-whitekey-shadow),  -3px 3px 0 5px black;
+   box-shadow:  0px 3px 0 1px var(--theme1-whitekey-shadow),  -3px 3px 0 8px var(--theme1-toggle-background);
 }
 
 .whiteKeys:active {
