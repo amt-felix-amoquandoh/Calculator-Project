@@ -72,8 +72,10 @@ body.theme3{
 }
 
 .calcLayout{
-  width: 800px;
+  width: 540px;
   padding: 20px;
+  height: 708px;
+  margin-bottom: 200px;
   
 }
 
@@ -201,10 +203,13 @@ body.theme3{
 
 
 .numDisplay{
-	font-size: 4.5rem;
+	font-size: 3.5rem;
 	font-weight: 400;
   margin-bottom: -10px;
   margin-top: 5px;
+  white-space: nowrap;
+  overflow: auto;
+  text-overflow: ellipsis;
  
 }
 
