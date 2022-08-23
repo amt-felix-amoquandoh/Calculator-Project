@@ -258,7 +258,7 @@ body.theme3{
   font-weight: bolder;
   color: var(--theme1-otherkeys-color);
   border: none;  
-  box-shadow:  -1px 3px 0 3px var(--theme1-bluekey-shadow),  -3px 3px 0 5px var(--theme1-toggle-background);
+  box-shadow:  0px 3px 0 1px var(--theme1-bluekey-shadow),  -3px 3px 0 5px var(--theme1-toggle-background);
   
 }
 
@@ -283,7 +283,7 @@ body.theme3{
 	color: var(--theme1-otherkeys-color);
 	font-weight: bolder;
   border: none;
-  box-shadow:  -1px 3px 0 3px var(--theme1-redkey-shadow),  -3px 3px 0 5px var(--theme1-toggle-background);
+  box-shadow:  0px 3px 0 1px var(--theme1-redkey-shadow),  -3px 3px 0 5px var(--theme1-toggle-background);
 }
 
 .orangeKey:active {
