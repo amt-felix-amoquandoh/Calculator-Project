@@ -132,29 +132,28 @@ clearLast.addEventListener("click", (button) => {
 // Toggle Switch codes
 let toggleSwitch = document.getElementsByClassName("redButton")[0];
 const bodyElement = document.body;
-//  const firstTheme = localStorage.getItem("firstTheme");
-//  const secondTheme = localStorage.getItem("secondTheme");
-//  const thirdTheme = localStorage.getItem("thirdTheme");
+ const firstTheme = localStorage.getItem("firstTheme");
+ const secondTheme = localStorage.getItem("secondTheme");
+ const thirdTheme = localStorage.getItem("thirdTheme");
 
-//  if(firstTheme){
-//   bodyElement.classList.add("theme1")
-// }
+ if(firstTheme){
+  bodyElement.classList.add("theme1");
+}
 
-// if(secondTheme){
-//   bodyElement.classList.add("theme2")
-// }
+if(secondTheme){
+  bodyElement.classList.add("theme2");
+}
 
-// if(thirdTheme){
-//   bodyElement.classList.add("theme3")
-// }
+if(thirdTheme){
+  bodyElement.classList.add("theme3");
+}
 
 function theme1() {
   toggleSwitch.classList.add("horizTranslate1");
   toggleSwitch.classList.remove("horizTranslate2");
   toggleSwitch.classList.remove("horizTranslate3");
   bodyElement.classList.add("theme1");
-  bodyElement.classList.remove("theme2");
-  bodyElement.classList.remove("theme3");
+  
   localStorage.setItem("themeActive", "firstTheme");
 }
 
