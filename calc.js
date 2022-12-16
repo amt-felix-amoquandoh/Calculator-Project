@@ -27,6 +27,7 @@ class MainCalculator {
     if (number === "." && this.mainDisplay.includes(".")) return;
     this.mainDisplay = this.mainDisplay.toString() + number.toString();
   }
+  
 
   selectOperator(operation) {
     if (this.mainDisplay === " ") return;
